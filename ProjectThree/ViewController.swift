@@ -39,8 +39,6 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         // Init navigationBar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
         self.navigationItem.leftBarButtonItem = navigationBarButtonItem
        
         
@@ -142,6 +140,8 @@ class ViewController: UIViewController {
         }
         numberLabel.text = numText
         x = stringAsDouble(result)
+        
+    
     }
     
     

@@ -17,13 +17,14 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        // Init navigationBar
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+        let backgroundImage = UIImage(named: "background")
+        let imageView = UIImageView()
+        imageView.image = backgroundImage
+        tableView.backgroundView = imageView
+        let navigationControllerImage = UIImage(named: "navigation")
+        self.navigationController?.navigationBar.setBackgroundImage(navigationControllerImage, forBarMetrics: .Default)
         
+       
     
     }
     
@@ -51,7 +52,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.resultLabel.text = mainVC.resultsArray[indexPath.row].result
         cell.dateLabel.text = mainVC.resultsArray[indexPath.row].date
         cell.numbersToResultLabel.text = mainVC.resultsArray[indexPath.row].numbersToResult
-        cell.contentView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+        
         
         return cell
     }
@@ -63,8 +64,12 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func backButtonPressed(sender: UIBarButtonItem) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.popViewControllerAnimated(true)
+        
     }
+    
+    
     
     func currentDateToNSDate(dateString: String) -> NSDate {
         let dateFormatter = NSDateFormatter()

@@ -10,14 +10,14 @@
 	<string>ProjectThree</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>194EE3E2172025B574C72383A77304A6BECBF318</key>
+		<key>0B7EF296D0F5D8F2B4CF875FBE5D6707E69E9A06</key>
 		<string>https://github.com/fortmarek/Calculator.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ProjectThree.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>194EE3E2172025B574C72383A77304A6BECBF318</key>
+		<key>0B7EF296D0F5D8F2B4CF875FBE5D6707E69E9A06</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>194EE3E2172025B574C72383A77304A6BECBF318</string>
+	<string>0B7EF296D0F5D8F2B4CF875FBE5D6707E69E9A06</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>194EE3E2172025B574C72383A77304A6BECBF318</string>
+			<string>0B7EF296D0F5D8F2B4CF875FBE5D6707E69E9A06</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Calculator</string>
 		</dict>
