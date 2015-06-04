@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F82991F51A7DA1FE0052CE29 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82991F41A7DA1FE0052CE29 /* ResultsViewController.swift */; };
 		F82991F71A7DA5EA0052CE29 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82991F61A7DA5EA0052CE29 /* ResultCell.swift */; };
-		F899E2EA1B0CC57300F86A6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F899E2E81B0CC57300F86A6B /* Main.storyboard */; };
+		F899E2EA1B0CC57300F86A6B /* View.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F899E2E81B0CC57300F86A6B /* View.storyboard */; };
 		F8B9C79F1A7E47B000104FED /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C79E1A7E47B000104FED /* ResultModel.swift */; };
 		F8D3AFE01A0D10480000F40B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3AFDF1A0D10480000F40B /* AppDelegate.swift */; };
 		F8D3AFE21A0D10480000F40B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3AFE11A0D10480000F40B /* ViewController.swift */; };
@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		F82991F41A7DA1FE0052CE29 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = ../ResultsViewController.swift; sourceTree = "<group>"; };
 		F82991F61A7DA5EA0052CE29 /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
-		F899E2E91B0CC57300F86A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F899E2E91B0CC57300F86A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/View.storyboard; sourceTree = "<group>"; };
 		F8B9C79E1A7E47B000104FED /* ResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		F8D3AFDA1A0D10480000F40B /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D3AFDE1A0D10480000F40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 				F8D3AFE11A0D10480000F40B /* ViewController.swift */,
 				F8B9C79E1A7E47B000104FED /* ResultModel.swift */,
 				F82991F41A7DA1FE0052CE29 /* ResultsViewController.swift */,
-				F899E2E81B0CC57300F86A6B /* Main.storyboard */,
+				F899E2E81B0CC57300F86A6B /* View.storyboard */,
 				F82991F61A7DA5EA0052CE29 /* ResultCell.swift */,
 				F8D3AFE61A0D10480000F40B /* Images.xcassets */,
 				F8D3AFE81A0D10480000F40B /* LaunchScreen.xib */,
@@ -203,7 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F899E2EA1B0CC57300F86A6B /* Main.storyboard in Resources */,
+				F899E2EA1B0CC57300F86A6B /* View.storyboard in Resources */,
 				F8D3AFEA1A0D10480000F40B /* LaunchScreen.xib in Resources */,
 				F8D3AFE71A0D10480000F40B /* Images.xcassets in Resources */,
 			);
@@ -250,12 +250,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F899E2E81B0CC57300F86A6B /* Main.storyboard */ = {
+		F899E2E81B0CC57300F86A6B /* View.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F899E2E91B0CC57300F86A6B /* Base */,
 			);
-			name = Main.storyboard;
+			name = View.storyboard;
 			sourceTree = "<group>";
 		};
 		F8D3AFE81A0D10480000F40B /* LaunchScreen.xib */ = {
@@ -354,6 +354,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -365,6 +366,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

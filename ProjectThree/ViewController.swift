@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         // Init navigationBar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationItem.leftBarButtonItem = navigationBarButtonItem
        
         
