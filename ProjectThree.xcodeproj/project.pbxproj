@@ -16,6 +16,8 @@
 		F8D3AFE71A0D10480000F40B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D3AFE61A0D10480000F40B /* Images.xcassets */; };
 		F8D3AFEA1A0D10480000F40B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D3AFE81A0D10480000F40B /* LaunchScreen.xib */; };
 		F8D3AFF61A0D10480000F40B /* ProjectThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3AFF51A0D10480000F40B /* ProjectThreeTests.swift */; };
+		F8E4EF941B20B11F00B01B5B /* Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8E4EF921B20B11F00B01B5B /* Calculator.xcdatamodeld */; };
+		F8E4EF961B20B26300B01B5B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4EF951B20B26300B01B5B /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		F8D3AFEF1A0D10480000F40B /* ProjectThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectThreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D3AFF41A0D10480000F40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D3AFF51A0D10480000F40B /* ProjectThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeTests.swift; sourceTree = "<group>"; };
+		F8E4EF931B20B11F00B01B5B /* Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Calculator.xcdatamodel; sourceTree = "<group>"; };
+		F8E4EF951B20B26300B01B5B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				F8D3AFDF1A0D10480000F40B /* AppDelegate.swift */,
+				F8E4EF921B20B11F00B01B5B /* Calculator.xcdatamodeld */,
 				F8D3AFE11A0D10480000F40B /* ViewController.swift */,
-				F8B9C79E1A7E47B000104FED /* ResultModel.swift */,
 				F82991F41A7DA1FE0052CE29 /* ResultsViewController.swift */,
+				F8E4EF951B20B26300B01B5B /* Result.swift */,
+				F8B9C79E1A7E47B000104FED /* ResultModel.swift */,
 				F899E2E81B0CC57300F86A6B /* View.storyboard */,
 				F82991F61A7DA5EA0052CE29 /* ResultCell.swift */,
 				F8D3AFE61A0D10480000F40B /* Images.xcassets */,
@@ -227,7 +233,9 @@
 				F8D3AFE01A0D10480000F40B /* AppDelegate.swift in Sources */,
 				F82991F71A7DA5EA0052CE29 /* ResultCell.swift in Sources */,
 				F8B9C79F1A7E47B000104FED /* ResultModel.swift in Sources */,
+				F8E4EF961B20B26300B01B5B /* Result.swift in Sources */,
 				F82991F51A7DA1FE0052CE29 /* ResultsViewController.swift in Sources */,
+				F8E4EF941B20B11F00B01B5B /* Calculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +361,7 @@
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ProjectThree;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -365,7 +373,7 @@
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ProjectThree;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -386,7 +394,7 @@
 				);
 				INFOPLIST_FILE = ProjectThreeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ProjectThreeTests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectThree.app/ProjectThree";
 			};
@@ -404,7 +412,7 @@
 				);
 				INFOPLIST_FILE = ProjectThreeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ProjectThreeTests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectThree.app/ProjectThree";
 			};
@@ -441,6 +449,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8E4EF921B20B11F00B01B5B /* Calculator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8E4EF931B20B11F00B01B5B /* Calculator.xcdatamodel */,
+			);
+			currentVersion = F8E4EF931B20B11F00B01B5B /* Calculator.xcdatamodel */;
+			path = Calculator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F8D3AFD21A0D10480000F40B /* Project object */;
 }

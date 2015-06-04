@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     var mark: String = ""
@@ -341,7 +342,21 @@ class ViewController: UIViewController {
         let newResult = ResultModel(result: result, numbersToResult: xAsString + " " + mark + " " +  yAsString, date: currentDate())
         resultsArray.append(newResult)
         x = stringAsDouble(result)
+        
+        
+        //CoreData
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+        let entityDescription = NSEntityDescription.entityForName("Result", inManagedObjectContext: managedObjectContext)
+        let newresult = Result(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+        newresult.result = result
+        newresult.date = currentDate()
+        
+        (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
+        
     }
+    
+    
+    
     func stringAsDouble (string: String) -> Double {
         return (string as NSString).doubleValue
     }

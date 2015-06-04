@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class ResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,18 +25,31 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         let navigationControllerImage = UIImage(named: "navigation")
         self.navigationController?.navigationBar.setBackgroundImage(navigationControllerImage, forBarMetrics: .Default)
         
-       
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+        var request = NSFetchRequest(entityName: "Result")
+        var error: NSError? = nil
+        var results: NSArray = managedObjectContext.executeFetchRequest(request, error: &error)!
+        for res in results {
+            let result = res as! Result
+            println(result.date)
+            println(result.result)
+        }
+
+        println(fetchedResultsController)
+        let fetchedLists: [Result]? = fetchedResultsController.fetchedObjects as? [Result]
+        println(fetchedLists)
+
     
     }
     
     override func viewDidAppear(animated: Bool) {
-        mainVC.resultsArray = mainVC.resultsArray.sorted {
+        /*  mainVC.resultsArray = mainVC.resultsArray.sorted {
             (resultOne: ResultModel, resultTwo: ResultModel) -> Bool in
             let resultOneDate = self.currentDateToNSDate(resultOne.date)
             let resultTwoDate = self.currentDateToNSDate(resultTwo.date)
             return resultOneDate.timeIntervalSince1970 > resultTwoDate.timeIntervalSince1970
-        }
-        tableView.reloadData()
+}*/
+      //  tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,14 +59,15 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mainVC.resultsArray.count
+           return mainVC.resultsArray.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: ResultCell = tableView.dequeueReusableCellWithIdentifier("resultCell") as! ResultCell
-        cell.resultLabel.text = mainVC.resultsArray[indexPath.row].result
+        let result = fetchedResultsController.objectAtIndexPath(indexPath) as! Result
+        cell.resultLabel.text = result.result
         cell.dateLabel.text = mainVC.resultsArray[indexPath.row].date
         cell.numbersToResultLabel.text = mainVC.resultsArray[indexPath.row].numbersToResult
-        
+
         
         return cell
     }
@@ -78,6 +93,18 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         return date!
     }
 
+    var fetchedResultsController: NSFetchedResultsController {
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let request = NSFetchRequest(entityName: "Result")
+        let sortDescriptor = NSSortDescriptor(key: "result", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+        
+        let resultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context!, sectionNameKeyPath: "result" , cacheName: nil)
+        resultsController.performFetch(nil)
+        resultsController.delegate = self
+
+        return resultsController
+    }
 
     
 

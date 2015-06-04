@@ -26,7 +26,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -48,7 +48,7 @@
         <!--Results-->
         <scene sceneID="Sif-5u-etr">
             <objects>
-                <viewController id="Z1Q-HD-hbd" customClass="ResultsViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z1Q-HD-hbd" customClass="ResultsViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uem-v6-SV7"/>
                         <viewControllerLayoutGuide type="bottom" id="ewT-mY-Os4"/>
@@ -62,7 +62,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="resultCell" rowHeight="85" id="QFh-hd-sE9" customClass="ResultCell" customModule="ProjectThree" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="resultCell" rowHeight="85" id="QFh-hd-sE9" customClass="ResultCell" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="QFh-hd-sE9" id="VvS-QW-aWs">
