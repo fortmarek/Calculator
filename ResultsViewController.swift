@@ -24,20 +24,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.backgroundView = imageView
         let navigationControllerImage = UIImage(named: "navigation")
         self.navigationController?.navigationBar.setBackgroundImage(navigationControllerImage, forBarMetrics: .Default)
-        
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
-        var request = NSFetchRequest(entityName: "Result")
-        var error: NSError? = nil
-        var results: NSArray = managedObjectContext.executeFetchRequest(request, error: &error)!
-        for res in results {
-            let result = res as! Result
-            println(result.date)
-            println(result.result)
-        }
 
-        println(fetchedResultsController)
-        let fetchedLists: [Result]? = fetchedResultsController.fetchedObjects as? [Result]
-        println(fetchedLists)
 
     
     }
@@ -59,14 +46,15 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return mainVC.resultsArray.count
+        let objectArray: [AnyObject]? = fetchedResultsController.fetchedObjects
+        return objectArray!.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: ResultCell = tableView.dequeueReusableCellWithIdentifier("resultCell") as! ResultCell
         let result = fetchedResultsController.objectAtIndexPath(indexPath) as! Result
         cell.resultLabel.text = result.result
-        cell.dateLabel.text = mainVC.resultsArray[indexPath.row].date
-        cell.numbersToResultLabel.text = mainVC.resultsArray[indexPath.row].numbersToResult
+        cell.dateLabel.text = result.date
+        
 
         
         return cell
@@ -104,6 +92,19 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         resultsController.delegate = self
 
         return resultsController
+    }
+    
+    func numberOfObjects () -> Int {
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+        var request = NSFetchRequest(entityName: "Result")
+        var error: NSError? = nil
+        var results: NSArray = managedObjectContext.executeFetchRequest(request, error: &error)!
+        var i: Int = 0
+        for res in results{
+            i++
+        }
+        let objectArray: [AnyObject]? = fetchedResultsController.fetchedObjects
+        return objectArray!.count
     }
 
     
